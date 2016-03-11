@@ -6,7 +6,9 @@ elseif(MSVC)
    #add_definitions(-Ds) ????
 endif()
 
-
+find_package(PythonInterp REQUIRED)
+find_package(PythonLibs REQUIRED)
+find_package(NUMPY REQUIRED)
 
 #--------------------------------------------------------------
 # Find packages
@@ -137,10 +139,6 @@ if ( WITH_BOOST )
 else()
    message( FATAL_ERROR "Option  WITH_BOOST  needs to be activated to compile the OpenGM Python Wrapper" )
 endif()
-
-
-
-find_package(NUMPY REQUIRED)
 
 #--------------------------------------------------------------
 # Include Directories
