@@ -22,6 +22,7 @@ IF(WITH_QPBO)
       ADD_LIBRARY(external-library-qpbo-shared SHARED
                   ${QPBO_SRC_FILES}
       )
+      INSTALL(TARGETS external-library-qpbo-shared external-library-qpbo ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
     ELSE(DEFINED QPBO_SRC_FILES_EXIST)
         MESSAGE ("QPBO not installed, run make externalLibs first and configure again")
     ENDIF(DEFINED QPBO_SRC_FILES_EXIST)
@@ -49,6 +50,7 @@ IF(WITH_TRWS)
       ADD_LIBRARY(external-library-trws-shared SHARED
                   ${TRWS_SRC_FILES}
       )
+      INSTALL(TARGETS external-library-trws external-library-trws-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
     ELSE(DEFINED TRWS_SRC_FILES_EXIST)
         MESSAGE ("TRWS not installed, run make externalLibs first and configure again")
     ENDIF(DEFINED TRWS_SRC_FILES_EXIST)
@@ -78,6 +80,7 @@ IF(WITH_GCO)
       ADD_LIBRARY(external-library-gco-shared SHARED
                   ${GCO_SRC_FILES}
       )
+      INSTALL(TARGETS external-library-gco external-library-gco-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
     ELSE(DEFINED GCO_SRC_FILES_EXIST)
         MESSAGE ("GCO not installed, run make externalLibs first and configure again")
     ENDIF(DEFINED GCO_SRC_FILES_EXIST)
@@ -103,6 +106,7 @@ IF(WITH_MAXFLOW)
       ADD_LIBRARY(external-library-maxflow-shared SHARED
                   ${MAXFLOW_SRC_FILES}
       )  
+      INSTALL(TARGETS external-library-maxflow external-library-maxflow-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
     ELSE(DEFINED MAXFLOW_SRC_FILES_EXIST)
         MESSAGE ("MAXFLOW not installed, run make externalLibs first and configure again")
     ENDIF(DEFINED MAXFLOW_SRC_FILES_EXIST)
@@ -126,6 +130,7 @@ IF(WITH_MAXFLOW_IBFS)
       ADD_LIBRARY(external-library-maxflow-ibfs-shared SHARED 
                   ${MAXFLOW_IBFS_SRC_FILES}
       )
+      INSTALL(TARGETS external-library-maxflow-ibfs external-library-maxflow-ibfs-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
     ELSE(DEFINED MAXFLOW_IBFS_SRC_FILES_EXIST)
         MESSAGE ("MAXFLOW_IBFS not installed, run make externalLibs first and configure again")
     ENDIF(DEFINED MAXFLOW_IBFS_SRC_FILES_EXIST)
@@ -158,6 +163,7 @@ IF(WITH_MRF)
       ADD_LIBRARY(external-library-mrf-shared SHARED
                   ${MRF_SRC_FILES}
       )
+      INSTALL(TARGETS external-library-mrf external-library-mrf-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
     ELSE(DEFINED MRF_SRC_FILES_EXIST)
         MESSAGE ("MRF not installed, run make externalLibs first and configure again")
     ENDIF(DEFINED MRF_SRC_FILES_EXIST)
@@ -183,6 +189,7 @@ IF(WITH_FASTPD)
       ADD_LIBRARY(external-library-fastpd-shared SHARED
                   ${FASTPD_SRC_FILES}
       )
+      INSTALL(TARGETS external-library-fastpd external-library-fastpd-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
     ELSE(DEFINED FASTPD_SRC_FILES_EXIST)
         MESSAGE ("FASTPD not installed, run make externalLibs first and configure again")
     ENDIF(DEFINED FASTPD_SRC_FILES_EXIST)
@@ -298,7 +305,7 @@ IF(WITH_AD3)
     include_directories( ${AD3_PATCHEDSRCDIR}/Eigen )
     ADD_LIBRARY(external-library-ad3   ${AD3_SRC_FILES})
     ADD_LIBRARY(external-library-ad3-shared   SHARED ${AD3_SRC_FILES} )
-      
+    INSTALL(TARGETS external-library-ad3 external-library-ad3-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
 
   ELSE(DEFINED AD3_SRC_FILES_EXIST)
     MESSAGE ("Ad3 not installed, run make externalLibs first and configure again")
@@ -416,6 +423,7 @@ IF(WITH_DAOOPT)
                   ${DAOOPT_GZSTREAM_SRC_FILES}
                   ${DAOOPT_SLS4MPE_SRC_FILES}              
       )
+      INSTALL(TARGETS external-library-daoopt external-library-daoopt-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
       
       target_link_libraries(external-library-daoopt
          ${CMAKE_THREAD_LIBS_INIT}
@@ -458,6 +466,7 @@ IF(WITH_MPLP)
       ADD_LIBRARY(external-library-mplp-shared SHARED
                   ${MPLP_SRC_FILES}
       )
+      INSTALL(TARGETS external-library-mplp external-library-mplp-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
     ELSE(DEFINED MPLP_SRC_FILES_EXIST)
         MESSAGE ("MPLP not installed, run make externalLibs first and configure again")
     ENDIF(DEFINED MPLP_SRC_FILES_EXIST)
@@ -494,6 +503,7 @@ if(WITH_SRMP)
       ADD_LIBRARY(external-library-srmp-shared SHARED
                   ${SRMP_SRC_FILES}
       )
+      INSTALL(TARGETS external-library-srmp external-library-srmp-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
     ELSE(DEFINED SRMP_SRC_FILES_EXIST)
         MESSAGE ("SRMP not installed, run make externalLibs first and configure again")
     ENDIF(DEFINED SRMP_SRC_FILES_EXIST)
@@ -513,7 +523,7 @@ if(WITH_PLANARITY)
   
   ADD_LIBRARY(opengm-external-planarity   ${PLANARITY_SRC_FILES})
   ADD_LIBRARY(opengm-external-planarity-shared   SHARED ${PLANARITY_SRC_FILES} ) 
-
+  INSTALL(TARGETS opengm-external-planarity opengm-external-planarity-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
 endif(WITH_PLANARITY)
 
 if(WITH_BLOSSOM5)
@@ -532,5 +542,5 @@ if(WITH_BLOSSOM5)
 
   ADD_LIBRARY(opengm-external-blossom5   ${BLOSSOM5_SRC_FILES})
   ADD_LIBRARY(opengm-external-blossom5-shared   SHARED ${BLOSSOM5_SRC_FILES} )
- 
+  INSTALL(TARGETS opengm-external-blossom5 opengm-external-blossom5-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
 endif(WITH_BLOSSOM5)
