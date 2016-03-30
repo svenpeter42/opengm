@@ -132,7 +132,7 @@ if(WITH_HDF5)
     target_link_libraries(opengm handleCollector)
         
     if(WITH_MAXFLOW)
-        target_link_libraries(opengm external-library-maxflow-shared)
+        target_link_libraries(opengm opengm-external-maxflow-shared)
     endif(WITH_MAXFLOW)
     if(WITH_CPLEX)
         if(WIN32)
@@ -150,7 +150,7 @@ if(WITH_HDF5)
     endif()
 
     if(WITH_QPBO)
-           target_link_libraries(opengm external-library-qpbo-shared)
+           target_link_libraries(opengm opengm-external-qpbo-shared)
     endif(WITH_QPBO)
 
     if(WITH_CONICBUNDLE)
@@ -158,19 +158,19 @@ if(WITH_HDF5)
     endif(WITH_CONICBUNDLE)
     
     if(WITH_MRF)
-      target_link_libraries(opengm external-library-mrf-shared)
+      target_link_libraries(opengm opengm-external-mrf-shared)
     endif(WITH_MRF)
     
     if(WITH_GCO)
-      target_link_libraries(opengm external-library-gco)
+      target_link_libraries(opengm opengm-external-gco)
     endif(WITH_GCO)
     
     if(WITH_FASTPD)
-      target_link_libraries(opengm external-library-fastpd) 
+      target_link_libraries(opengm opengm-external-fastpd) 
     endif(WITH_FASTPD)
     
     if(WITH_GRANTE)
-        target_link_libraries(opengm external-library-grante)
+        target_link_libraries(opengm opengm-external-grante)
     endif(WITH_GRANTE)
 
     ## INSTALL

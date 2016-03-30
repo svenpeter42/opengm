@@ -33,17 +33,17 @@
     endif(LINK_RT) 
 
     if(WITH_FASTPD)
-      target_link_libraries(opengm_min_sum external-library-fastpd)   
+      target_link_libraries(opengm_min_sum opengm-external-fastpd)   
     endif(WITH_FASTPD)
 
     if(WITH_GCO)
-      target_link_libraries(opengm_min_sum external-library-gco)
+      target_link_libraries(opengm_min_sum opengm-external-gco)
     endif(WITH_GCO)
 
     if(WITH_MAXFLOW)
-        target_link_libraries(opengm_max_prod external-library-maxflow)
-        target_link_libraries(opengm_min_sum external-library-maxflow)
-        target_link_libraries(opengm_min_sum_small external-library-maxflow)
+        target_link_libraries(opengm_max_prod opengm-external-maxflow)
+        target_link_libraries(opengm_min_sum opengm-external-maxflow)
+        target_link_libraries(opengm_min_sum_small opengm-external-maxflow)
     endif(WITH_MAXFLOW)
     if(WITH_CPLEX)
         if(WIN32)
@@ -58,9 +58,9 @@
     endif(WITH_CPLEX)
 
     if(WITH_QPBO)
-           target_link_libraries(opengm_max_prod external-library-qpbo )
-           target_link_libraries(opengm_min_sum  external-library-qpbo )
-           target_link_libraries(opengm_min_sum_small  external-library-qpbo )
+           target_link_libraries(opengm_max_prod opengm-external-qpbo )
+           target_link_libraries(opengm_min_sum  opengm-external-qpbo )
+           target_link_libraries(opengm_min_sum_small  opengm-external-qpbo )
     endif(WITH_QPBO)
 
     if(WITH_CONICBUNDLE)
@@ -69,30 +69,30 @@
     endif(WITH_CONICBUNDLE)
     
     if(WITH_MRF)
-      target_link_libraries(opengm_min_sum external-library-mrf)
-      target_link_libraries(opengm_min_sum_small external-library-mrf)
+      target_link_libraries(opengm_min_sum opengm-external-mrf)
+      target_link_libraries(opengm_min_sum_small opengm-external-mrf)
     endif(WITH_MRF)  
 
     if(WITH_GRANTE)
-      target_link_libraries(opengm_min_sum external-library-grante)
+      target_link_libraries(opengm_min_sum opengm-external-grante)
       target_link_libraries(opengm_min_sum ${Boost_LIBRARIES})
     endif(WITH_GRANTE)
     
     if(WITH_DAOOPT)
-       target_link_libraries(opengm_min_sum external-library-daoopt)
+       target_link_libraries(opengm_min_sum opengm-external-daoopt)
     endif(WITH_DAOOPT)
     
     if(WITH_MPLP)
-       target_link_libraries(opengm_min_sum external-library-mplp)
+       target_link_libraries(opengm_min_sum opengm-external-mplp)
     endif(WITH_MPLP)
 
     if(WITH_SRMP)
-        target_link_libraries(opengm_min_sum external-library-srmp)
+        target_link_libraries(opengm_min_sum opengm-external-srmp)
     endif(WITH_SRMP)
 
     if(WITH_AD3)
-       target_link_libraries(opengm_min_sum external-library-ad3)
-       target_link_libraries(opengm_min_sum_small external-library-ad3)
+       target_link_libraries(opengm_min_sum opengm-external-ad3)
+       target_link_libraries(opengm_min_sum_small opengm-external-ad3)
     endif(WITH_AD3)
 
     if(WITH_PLANARITY AND WITH_BLOSSOM5)

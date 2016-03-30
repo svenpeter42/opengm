@@ -10,7 +10,7 @@
 
 if(WITH_TRWS)
   add_executable(doMinSumInferenceExternal     doMinSumInferenceExternal.cxx     ${headers}) 
-  target_link_libraries(doMinSumInferenceExternal external-library-trws)
+  target_link_libraries(doMinSumInferenceExternal opengm-external-trws)
 endif() 
 
 if(LINK_RT)
