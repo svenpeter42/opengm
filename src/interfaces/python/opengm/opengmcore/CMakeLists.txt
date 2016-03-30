@@ -85,7 +85,7 @@ else()
 endif(LINK_RT)
 
 IF(WITH_MAXFLOW)
-   #target_link_libraries(_opengmcore  external-library-maxflow)
+   #target_link_libraries(_opengmcore  opengm-external-maxflow)
 endif(WITH_MAXFLOW)
 if(WITH_HDF5)
    target_link_libraries(_opengmcore  ${HDF5_CORE_LIBRARY} ${HDF5_LIBRARIES} )

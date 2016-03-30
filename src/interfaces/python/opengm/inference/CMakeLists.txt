@@ -94,28 +94,28 @@ if(WITH_LIBDAI)
 endif()
 
 if(WITH_QPBO)
-   target_link_libraries(_inference external-library-qpbo-shared)
+   target_link_libraries(_inference opengm-external-qpbo-shared)
 endif()
 
 if(WITH_MAXFLOW)
-   target_link_libraries(_inference external-library-maxflow-shared)
+   target_link_libraries(_inference opengm-external-maxflow-shared)
 endif()
 
 if(WITH_MAXFLOW_IBFS)
-  target_link_libraries(_inference external-library-maxflow-ibfs-shared)
+  target_link_libraries(_inference opengm-external-maxflow-ibfs-shared)
 endif()
 
 if(WITH_TRWS)
-   target_link_libraries(_inference external-library-trws-shared)
+   target_link_libraries(_inference opengm-external-trws-shared)
 endif()
 
 
 if(WITH_FASTPD)
-   target_link_libraries(_inference external-library-fastpd-shared)
+   target_link_libraries(_inference opengm-external-fastpd-shared)
 endif()
 
 if(WITH_AD3)
-   target_link_libraries(_inference external-library-ad3-shared )
+   target_link_libraries(_inference opengm-external-ad3-shared )
 endif()
 
 
@@ -125,7 +125,7 @@ if(WITH_CONICBUNDLE)
 endif()
 
 if(WITH_MRF)
-   target_link_libraries(_inference external-library-mrf-shared)
+   target_link_libraries(_inference opengm-external-mrf-shared)
 endif()
 
 if(WITH_CPLEX)

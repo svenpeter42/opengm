@@ -16,13 +16,13 @@ IF(WITH_QPBO)
     ENDFOREACH(f)
      
     IF(DEFINED QPBO_SRC_FILES_EXIST)    
-      ADD_LIBRARY(external-library-qpbo
+      ADD_LIBRARY(opengm-external-qpbo
                   ${QPBO_SRC_FILES}
       )
-      ADD_LIBRARY(external-library-qpbo-shared SHARED
+      ADD_LIBRARY(opengm-external-qpbo-shared SHARED
                   ${QPBO_SRC_FILES}
       )
-      INSTALL(TARGETS external-library-qpbo-shared external-library-qpbo ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
+      INSTALL(TARGETS opengm-external-qpbo-shared opengm-external-qpbo ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
     ELSE(DEFINED QPBO_SRC_FILES_EXIST)
         MESSAGE ("QPBO not installed, run make externalLibs first and configure again")
     ENDIF(DEFINED QPBO_SRC_FILES_EXIST)
@@ -44,13 +44,13 @@ IF(WITH_TRWS)
     ENDFOREACH(f)
      
     IF(DEFINED TRWS_SRC_FILES_EXIST)    
-      ADD_LIBRARY(external-library-trws
+      ADD_LIBRARY(opengm-external-trws
                   ${TRWS_SRC_FILES}
       )
-      ADD_LIBRARY(external-library-trws-shared SHARED
+      ADD_LIBRARY(opengm-external-trws-shared SHARED
                   ${TRWS_SRC_FILES}
       )
-      INSTALL(TARGETS external-library-trws external-library-trws-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
+      INSTALL(TARGETS opengm-external-trws opengm-external-trws-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
     ELSE(DEFINED TRWS_SRC_FILES_EXIST)
         MESSAGE ("TRWS not installed, run make externalLibs first and configure again")
     ENDIF(DEFINED TRWS_SRC_FILES_EXIST)
@@ -74,13 +74,13 @@ IF(WITH_GCO)
     ENDFOREACH(f)
      
     IF(DEFINED GCO_SRC_FILES_EXIST)    
-      ADD_LIBRARY(external-library-gco
+      ADD_LIBRARY(opengm-external-gco
                   ${GCO_SRC_FILES}
       ) 
-      ADD_LIBRARY(external-library-gco-shared SHARED
+      ADD_LIBRARY(opengm-external-gco-shared SHARED
                   ${GCO_SRC_FILES}
       )
-      INSTALL(TARGETS external-library-gco external-library-gco-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
+      INSTALL(TARGETS opengm-external-gco opengm-external-gco-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
     ELSE(DEFINED GCO_SRC_FILES_EXIST)
         MESSAGE ("GCO not installed, run make externalLibs first and configure again")
     ENDIF(DEFINED GCO_SRC_FILES_EXIST)
@@ -100,13 +100,13 @@ IF(WITH_MAXFLOW)
     ENDFOREACH(f)
      
     IF(DEFINED MAXFLOW_SRC_FILES_EXIST)    
-      ADD_LIBRARY(external-library-maxflow
+      ADD_LIBRARY(opengm-external-maxflow
                   ${MAXFLOW_SRC_FILES}
       )
-      ADD_LIBRARY(external-library-maxflow-shared SHARED
+      ADD_LIBRARY(opengm-external-maxflow-shared SHARED
                   ${MAXFLOW_SRC_FILES}
       )  
-      INSTALL(TARGETS external-library-maxflow external-library-maxflow-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
+      INSTALL(TARGETS opengm-external-maxflow opengm-external-maxflow-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
     ELSE(DEFINED MAXFLOW_SRC_FILES_EXIST)
         MESSAGE ("MAXFLOW not installed, run make externalLibs first and configure again")
     ENDIF(DEFINED MAXFLOW_SRC_FILES_EXIST)
@@ -124,13 +124,13 @@ IF(WITH_MAXFLOW_IBFS)
     ENDFOREACH(f)
     
     IF(DEFINED MAXFLOW_IBFS_SRC_FILES_EXIST)    
-      ADD_LIBRARY(external-library-maxflow-ibfs 
+      ADD_LIBRARY(opengm-external-maxflow-ibfs 
                   ${MAXFLOW_IBFS_SRC_FILES}
       )
-      ADD_LIBRARY(external-library-maxflow-ibfs-shared SHARED 
+      ADD_LIBRARY(opengm-external-maxflow-ibfs-shared SHARED 
                   ${MAXFLOW_IBFS_SRC_FILES}
       )
-      INSTALL(TARGETS external-library-maxflow-ibfs external-library-maxflow-ibfs-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
+      INSTALL(TARGETS opengm-external-maxflow-ibfs opengm-external-maxflow-ibfs-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
     ELSE(DEFINED MAXFLOW_IBFS_SRC_FILES_EXIST)
         MESSAGE ("MAXFLOW_IBFS not installed, run make externalLibs first and configure again")
     ENDIF(DEFINED MAXFLOW_IBFS_SRC_FILES_EXIST)
@@ -157,13 +157,13 @@ IF(WITH_MRF)
     ENDFOREACH(f)
      
     IF(DEFINED MRF_SRC_FILES_EXIST)    
-      ADD_LIBRARY(external-library-mrf
+      ADD_LIBRARY(opengm-external-mrf
                   ${MRF_SRC_FILES}
       ) 
-      ADD_LIBRARY(external-library-mrf-shared SHARED
+      ADD_LIBRARY(opengm-external-mrf-shared SHARED
                   ${MRF_SRC_FILES}
       )
-      INSTALL(TARGETS external-library-mrf external-library-mrf-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
+      INSTALL(TARGETS opengm-external-mrf opengm-external-mrf-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
     ELSE(DEFINED MRF_SRC_FILES_EXIST)
         MESSAGE ("MRF not installed, run make externalLibs first and configure again")
     ENDIF(DEFINED MRF_SRC_FILES_EXIST)
@@ -183,13 +183,13 @@ IF(WITH_FASTPD)
     ENDFOREACH(f)
     
     IF(DEFINED FASTPD_SRC_FILES_EXIST)    
-      ADD_LIBRARY(external-library-fastpd
+      ADD_LIBRARY(opengm-external-fastpd
                   ${FASTPD_SRC_FILES}
       ) 
-      ADD_LIBRARY(external-library-fastpd-shared SHARED
+      ADD_LIBRARY(opengm-external-fastpd-shared SHARED
                   ${FASTPD_SRC_FILES}
       )
-      INSTALL(TARGETS external-library-fastpd external-library-fastpd-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
+      INSTALL(TARGETS opengm-external-fastpd opengm-external-fastpd-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
     ELSE(DEFINED FASTPD_SRC_FILES_EXIST)
         MESSAGE ("FASTPD not installed, run make externalLibs first and configure again")
     ENDIF(DEFINED FASTPD_SRC_FILES_EXIST)
@@ -277,7 +277,7 @@ IF(WITH_GRANTE)
     
     IF(DEFINED GRANTE_SRC_FILES_EXIST)
       add_definitions(-fopenmp -fno-omit-frame-pointer -std=c++0x)    
-      ADD_LIBRARY(external-library-grante
+      ADD_LIBRARY(opengm-external-grante
                   ${GRANTE_SRC_FILES}
       )
     ELSE(DEFINED GRANTE_SRC_FILES_EXIST)
@@ -303,9 +303,9 @@ IF(WITH_AD3)
   IF(DEFINED AD3_SRC_FILES_EXIST)
     include_directories( ${AD3_PATCHEDSRCDIR}/ad3 )
     include_directories( ${AD3_PATCHEDSRCDIR}/Eigen )
-    ADD_LIBRARY(external-library-ad3   ${AD3_SRC_FILES})
-    ADD_LIBRARY(external-library-ad3-shared   SHARED ${AD3_SRC_FILES} )
-    INSTALL(TARGETS external-library-ad3 external-library-ad3-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
+    ADD_LIBRARY(opengm-external-ad3   ${AD3_SRC_FILES})
+    ADD_LIBRARY(opengm-external-ad3-shared   SHARED ${AD3_SRC_FILES} )
+    INSTALL(TARGETS opengm-external-ad3 opengm-external-ad3-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
 
   ELSE(DEFINED AD3_SRC_FILES_EXIST)
     MESSAGE ("Ad3 not installed, run make externalLibs first and configure again")
@@ -411,21 +411,21 @@ IF(WITH_DAOOPT)
     ENDFOREACH(f)
     
     IF(DEFINED DAOOPT_SRC_FILES_EXIST)
-      ADD_LIBRARY(external-library-daoopt
+      ADD_LIBRARY(opengm-external-daoopt
                   ${DAOOPT_SRC_FILES}
                   ${DAOOPT_ZLIB_SRC_FILES}
                   ${DAOOPT_GZSTREAM_SRC_FILES}
                   ${DAOOPT_SLS4MPE_SRC_FILES}
       )
-      ADD_LIBRARY(external-library-daoopt-shared SHARED
+      ADD_LIBRARY(opengm-external-daoopt-shared SHARED
                   ${DAOOPT_SRC_FILES}
                   ${DAOOPT_ZLIB_SRC_FILES}
                   ${DAOOPT_GZSTREAM_SRC_FILES}
                   ${DAOOPT_SLS4MPE_SRC_FILES}              
       )
-      INSTALL(TARGETS external-library-daoopt external-library-daoopt-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
+      INSTALL(TARGETS opengm-external-daoopt opengm-external-daoopt-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
       
-      target_link_libraries(external-library-daoopt
+      target_link_libraries(opengm-external-daoopt
          ${CMAKE_THREAD_LIBS_INIT}
          ${Boost_PROGRAM_OPTIONS_LIBRARY}
          ${Boost_THREAD_LIBRARY}
@@ -433,7 +433,7 @@ IF(WITH_DAOOPT)
          ${HDF5_LIBRARIES}      
       )
       
-      target_link_libraries(external-library-daoopt-shared
+      target_link_libraries(opengm-external-daoopt-shared
          ${CMAKE_THREAD_LIBS_INIT}
          ${Boost_PROGRAM_OPTIONS_LIBRARY}
          ${Boost_THREAD_LIBRARY}
@@ -460,13 +460,13 @@ IF(WITH_MPLP)
     ENDFOREACH(f)
     
     IF(DEFINED MPLP_SRC_FILES_EXIST)    
-      ADD_LIBRARY(external-library-mplp
+      ADD_LIBRARY(opengm-external-mplp
                   ${MPLP_SRC_FILES}
       ) 
-      ADD_LIBRARY(external-library-mplp-shared SHARED
+      ADD_LIBRARY(opengm-external-mplp-shared SHARED
                   ${MPLP_SRC_FILES}
       )
-      INSTALL(TARGETS external-library-mplp external-library-mplp-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
+      INSTALL(TARGETS opengm-external-mplp opengm-external-mplp-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
     ELSE(DEFINED MPLP_SRC_FILES_EXIST)
         MESSAGE ("MPLP not installed, run make externalLibs first and configure again")
     ENDIF(DEFINED MPLP_SRC_FILES_EXIST)
@@ -497,13 +497,13 @@ if(WITH_SRMP)
     ENDFOREACH(f)
     
     IF(DEFINED SRMP_SRC_FILES_EXIST)    
-      ADD_LIBRARY(external-library-srmp
+      ADD_LIBRARY(opengm-external-srmp
                   ${SRMP_SRC_FILES}
       ) 
-      ADD_LIBRARY(external-library-srmp-shared SHARED
+      ADD_LIBRARY(opengm-external-srmp-shared SHARED
                   ${SRMP_SRC_FILES}
       )
-      INSTALL(TARGETS external-library-srmp external-library-srmp-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
+      INSTALL(TARGETS opengm-external-srmp opengm-external-srmp-shared ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
     ELSE(DEFINED SRMP_SRC_FILES_EXIST)
         MESSAGE ("SRMP not installed, run make externalLibs first and configure again")
     ENDIF(DEFINED SRMP_SRC_FILES_EXIST)
